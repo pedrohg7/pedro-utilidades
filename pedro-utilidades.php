@@ -1,8 +1,9 @@
 <?php
+
 /*
 Plugin Name: Pedro Utilidades
 Description: Funcionalidades personalizadas para el blog SneakersHub
-Version: 1.0.0
+Version: 1.1.0
 Author: Pedro Manuel Herrera García
 License: GPL-2.0-or-later
 Text Domain: pedro-utilidades
@@ -74,7 +75,7 @@ add_filter('login_headertext', 'sneakershub_login_texto');
 function sneakershub_login_aviso($mensaje) {
 
     $aviso = '<p class="message">';
-    $aviso .= 'Acceso restringido al equipo de SneakersHub';
+    $aviso .= esc_html('Acceso restringido al equipo de SneakersHub');
     $aviso .= '</p>';
 
     return $aviso . $mensaje;
